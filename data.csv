@@ -1,0 +1,11 @@
+Usia,Pendapatan,Status_Pernikahan,Jumlah_Anak,Membeli_Rumah
+Muda,Rendah,Single,Tidak_ada,Tidak
+Dewasa,Tinggi,Menikah,Banyak,Ya
+Tua,Sedang,Menikah,Sedikit,Ya
+Muda,Sedang,Single,Tidak_ada,Tidak
+Dewasa,Rendah,Menikah,Sedikit,Tidak
+Tua,Tinggi,Menikah,Banyak,Ya
+Muda,Rendah,Single,Sedikit,Tidak
+Dewasa,Tinggi,Menikah,Tidak_ada,Ya
+Tua,Sedang,Menikah,Sedikit,Ya
+Muda,Tinggi,Single,Tidak_ada,Ya
