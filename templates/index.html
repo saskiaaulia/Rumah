@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Membeli Rumah</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('/static/assets/bg.jpg');
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent White */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-top: 10px;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+            color: #fff;
+        }
+        table {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table th, table td {
+            text-align: center;
+            padding: 15px;
+        }
+        table th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Prediksi Membeli Rumah</h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form method="post" action="/">
+                    <div class="form-group">
+                        <label for="Usia">Usia</label>
+                        <select id="Usia" name="Usia" class="form-control">
+                            <option value="Muda">Muda</option>
+                            <option value="Dewasa">Dewasa</option>
+                            <option value="Tua">Tua</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Pendapatan">Pendapatan</label>
+                        <select id="Pendapatan" name="Pendapatan" class="form-control">
+                            <option value="Rendah">Rendah</option>
+                            <option value="Sedang">Sedang</option>
+                            <option value="Tinggi">Tinggi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Status_Pernikahan">Status Pernikahan</label>
+                        <select id="Status_Pernikahan" name="Status_Pernikahan" class="form-control">
+                            <option value="Single">Single</option>
+                            <option value="Menikah">Menikah</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Jumlah_Anak">Jumlah Anak</label>
+                        <select id="Jumlah_Anak" name="Jumlah_Anak" class="form-control">
+                            <option value="Tidak ada">Tidak ada</option>
+                            <option value="Banyak">Banyak</option>
+                            <option value="Sedikit">Sedikit</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Prediksi</button>
+                    {% if prediction %}
+                        <h3 class="mt-5">Hasil Prediksi: {{ prediction }}</h3>
+                        <a href="/dataset" class="btn btn-secondary mt-3">Lihat Dataset</a>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
